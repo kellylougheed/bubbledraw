@@ -22,7 +22,8 @@ public class BubbleView extends ImageView implements View.OnTouchListener {
     public BubbleView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
         bubbleList = new ArrayList<Bubble>();
-        testBubbles();
+        // testBubbles();
+        setOnTouchListener(this);
     }
 
     private Runnable r = new Runnable() {
@@ -54,6 +55,10 @@ public class BubbleView extends ImageView implements View.OnTouchListener {
 
     @Override
     public boolean onTouch(View view, MotionEvent motionEvent) {
-        return false;
+        int x = (int) motionEvent.getX();
+        int y = (int) motionEvent.getY();
+        int s = rand.nextInt(size) + size;
+        bubbleList.add(new Bubble(x, y, s));
+        return true;
     }
 }
