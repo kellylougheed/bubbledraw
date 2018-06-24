@@ -6,6 +6,8 @@
 
 * When you are done, turn in your lab sheet and upload your work to GitHub. Submit the URL of your repo.
 
+<img src="http://kellylougheed.com/images/projects/bubbledraw.gif" alt="BubbleDraw app" />
+
 ## Extensions
 
 * Change the app background color.
