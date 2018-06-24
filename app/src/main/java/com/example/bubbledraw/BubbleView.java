@@ -12,18 +12,12 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class BubbleView extends ImageView implements View.OnTouchListener {
-    private Random rand = new Random();
-    private ArrayList<Bubble> bubbleList;
-    private int size = 50;
-    private int delay = 33;
-    private Paint myPaint = new Paint();
+
     private Handler h = new Handler();
 
     public BubbleView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        bubbleList = new ArrayList<Bubble>();
-        // testBubbles();
-        setOnTouchListener(this);
+
     }
 
     private Runnable r = new Runnable() {
@@ -44,12 +38,7 @@ public class BubbleView extends ImageView implements View.OnTouchListener {
     }
 
     public void testBubbles() {
-        for (int i = 0; i < 100; i++) {
-            int x = rand.nextInt(600);
-            int y = rand.nextInt(600);
-            int s = rand.nextInt(size) + size;
-            bubbleList.add(new Bubble(x, y, s));
-        }
+
         invalidate();
     }
 
