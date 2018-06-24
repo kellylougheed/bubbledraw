@@ -55,10 +55,12 @@ public class BubbleView extends ImageView implements View.OnTouchListener {
 
     @Override
     public boolean onTouch(View view, MotionEvent motionEvent) {
-        int x = (int) motionEvent.getX();
-        int y = (int) motionEvent.getY();
-        int s = rand.nextInt(size) + size;
-        bubbleList.add(new Bubble(x, y, s));
-        return true;
+        for (int i = 0; i < motionEvent.getPointerCount(); i++) {
+            int x = (int) motionEvent.getX();
+            int y = (int) motionEvent.getY();
+            int s = rand.nextInt(size) + size;
+            bubbleList.add(new Bubble(x, y, s));
+            return true;
+        }
     }
 }
