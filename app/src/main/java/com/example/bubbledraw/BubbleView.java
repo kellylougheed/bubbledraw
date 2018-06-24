@@ -25,10 +25,21 @@ public class BubbleView extends ImageView implements View.OnTouchListener {
         testBubbles();
     }
 
+    private Runnable r = new Runnable() {
+        @Override
+        public void run() {
+            for (Bubble b : bubbleList) {
+                b.update();
+            }
+            invalidate();
+        }
+    };
+
     protected void onDraw(Canvas canvas) {
         for (Bubble b : bubbleList) {
             b.draw(canvas);
         }
+        h.postDelayed(r, delay);
     }
 
     public void testBubbles() {
