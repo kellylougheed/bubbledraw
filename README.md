@@ -1,10 +1,6 @@
 # BubbleDraw Lab
 
-* Clone this repo to your machine with `git clone [url]` and open the folder as a project on Android Studio.
-
-* Follow the directions on the lab sheet.
-
-* When you are done, turn in your lab sheet and upload your work to GitHub. Submit the URL of your repo.
+* Download or clone this repo to your machine with `git clone [url]` and open the folder as a project on Android Studio.
 
 <img src="http://kellylougheed.com/images/projects/bubbledraw.gif" alt="BubbleDraw app" />
 
